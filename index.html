@@ -2,40 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Scurview</title>
-  <script>
-  'use strict'
-  function scurvecalc (coeff, start, speed, N) {
-    var responseCurve = Array(N)
-    for (var i = 0; i < N; i++) {
-      responseCurve[i] = coeff*Math.log(i + 1)/(1+Math.exp(start - speed * i))
-    }
-    return responseCurve
-  }
-  function makeContainer () {
-    const container = document.createElement('div')
-    const button = document.createElement('button')
-    container.style.backgroundColor = '#FFD000'
-    container.style.width = '400px'
-    container.style.height = '400px'
-    container.style.line_height = '400px'
-
-    button.style.position = 'fixed'
-    button.style.float = 'left'
-    button.style.display = 'table'
-    button.innerText = 'click me!'
-    button.onclick = function () {
-      container.innerText = scurvecalc(845167, 7, 0.00045, 10)
-    }
-    container.appendChild(button)
-    return container
-  }
-  function init () {
-    const body = document.querySelector('body')
-    body.appendChild(makeContainer())
-  }
-  window.onload = init
-  </script>
+  <title>scurview</title>
+  <script type='text/javascript' src='index.js'></script>
+  <script type='text/javascript' src='trap.js'></script>
 </head>
 <body>
 </body>
